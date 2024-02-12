@@ -7,6 +7,7 @@
 # /////////////////////////////////////////////////////////////
 # ---------------------------------------------------
 # Windows VM Credentials
+
 USER_NAME=""
 ADMIN_PW=""
 
@@ -45,13 +46,14 @@ WS_NSG_name="WS-NSG-$ID"
 
 # ---------------------------------------------------
 # VM Image, Machine Size, Disk Settings
-VM_IMG_WC="MicrosoftWindowsDesktop:Windows-10:win10-21h2-pro-g2:latest"
-VM_IMG_LR="RedHat:RHEL:8-lvm-gen2:latest"
+VM_IMG_WC="MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro:latest"
+VM_IMG_LR="RedHat:RHEL:8-lvm:latest"
 VM_IMG_WS="MicrosoftWindowsServer:WindowsServer:2019-Datacenter:latest"
-VM_IMG_LS="RedHat:RHEL:8-lvm-gen2:latest"
+VM_IMG_LS="RedHat:RHEL:8-lvm:latest"
 
 VM_SIZE="Standard_B2s"
 OS_DISK_SKU="StandardSSD_LRS"
+SECURITY_TYPE="Standard"
 
 # ---------------------------------------------------
 # Static IP setting
