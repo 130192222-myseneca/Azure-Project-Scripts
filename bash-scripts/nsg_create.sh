@@ -14,7 +14,7 @@ echo "Do you want to create Netwrok Security Groups? (yes/no)"
 read -r answer
 if [[ "$answer" == "yes" ]] 
 then
-    for item in "${NSG_list[@]}"
+    for item in "${nsg_list[@]}"
     do
         echo "Creating NSG: $item ---"
         az network nsg create -g $RG_NAME --name $item --location $LOCATION

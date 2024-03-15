@@ -30,6 +30,7 @@ else
                 --image  $image_name \
                 --size  $VM_SIZE \
                 --storage-sku $OS_DISK_SKU \
+                --security-type $SECURITY_TYPE \
                 --data-disk-delete-option Delete \
                 --nics  $nic_name \
                 --no-wait
@@ -63,7 +64,9 @@ else
                 --image  $image_name \
                 --size  $VM_SIZE \
                 --storage-sku $OS_DISK_SKU \
+                --security-type "Standard" \
                 --data-disk-delete-option Delete \
+                --security-type $SECURITY_TYPE \
                 --nics  $nic_name \
                 --ssh-key-values $public_sshkey_file \
                 --no-wait
@@ -112,8 +115,8 @@ do
         break
     else
         echo "Script is unable to query all VM successfully, this may be due to VM creation error!"
-        echo "You can exit at his stage, but this will risky"
-        echo "You are about to exit without configurign auto shutdwon configuration"
+        echo "You can exit at this stage, but this will be risky"
+        echo "You are about to exit without configuring auto-shutdown configuration"
         echo "Do you want to exit? (yes/no)"
         read -r answer
         if [ "$answer" == "yes" ]; then
